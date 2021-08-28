@@ -1,0 +1,7 @@
+# ignore MacOSX folder config file
+.DS_Store
+wpFolder/
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
