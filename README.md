@@ -20,8 +20,16 @@ Exploits :
   - [ ] Affected source code:
     - [Link](https://github.com/WordPress/WordPress/commit/0292de60ec78c5a44956765189403654fe4d080b)
   
-  
-### 2. (Required) User Account Enumaration
+### 2: Cross-site scripting via music metadata
+  - [ ] Summary: 
+    - CVE 2016-6814, Ver. <4.7.3 https://sumofpwn.nl/advisory/2016/wordpress_audio_playlist_functionality_is_affected_by_cross_site_scripting.html
+  - [ ] GIF Walkthrough: 
+    - ![css gif](https://github.com/anushareddy139/wpvskali/blob/main/xss.gif)
+    - Upload any audio file within file size constraints to the admin's media folder
+    - As admin, start creating a post. Choose "Add Media," and choose "Create a playlist."
+    - Add the audio file to the playlist, but insert an XSS script into the title. Again, we use the classic alert.
+      
+### 3. (Required) User Account Enumaration
   - [ ] Summary: 
     - Vulnerability types: Enumarating Users
     - Tested in version: 4.2.2
@@ -36,7 +44,7 @@ Exploits :
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
     
 
-### 3. Sessions Not Terminated Upon Explicit User Logout
+### 4. Sessions Not Terminated Upon Explicit User Logout
   - [ ] Summary: 
     - Vulnerability type(s): Auth Bypass/Broken Authentication (2017 OWASP Top 10: A2)
     - Version(s) affected: Wordpress 3.4.2 - 3.9.2
@@ -51,3 +59,6 @@ Exploits :
   - [ ] Affected source code:
     - [Link 1](https://whiteoaksecurity.com/blog/2012/12/17/cve-2012-5868-wordpress-342-sessions-not-terminated-upon-explicit-user-logout)
     - [Link 2](https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/leveraging-lfi-to-get-full-compromise-on-wordpress-sites/)
+  
+
+  
